@@ -1,0 +1,59 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+button, button:hover, button:focus, button:active {
+  text-decoration: none;
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, ol, ul, dl{
+  margin-bottom: 0;
+}
+
+ul{
+  padding-left: 0;
+}
+
+html {
+  scroll-behavior:smooth
+}
+
+// input number reset
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type="date"] {
+  display:block;
+
+  /* Solution 1 */
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  height: 51px; 
+}
+
+html, body {
+  font-family: 'OptimaEL-Text','Noto Sans TC', sans-serif; 
+}

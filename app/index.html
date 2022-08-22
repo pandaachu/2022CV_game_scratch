@@ -1,0 +1,78 @@
+---
+title: 虎禮刮出水噹噹
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+js: index
+---
+
+<div class="l-container event-index bg-index position-relative ">
+  <header class="bg-transparent"><img class="w-50 h-auto" src="img/logo.png" alt="logo"></header>
+  <div class="flower-wrap mx-auto">
+    <img class="flower-item flower-1 position-absolute js-flower1" src="./img/index/flower-1-top.png" alt="">
+    <img class="flower-item flower-2 position-absolute js-flower2" src="./img/index/flower-2-top.png" alt="">
+    <img class="flower-item flower-3 position-absolute js-flower3" src="./img/index/flower-3.png" alt="">
+    <img class="flower-item flower-4 position-absolute js-flower4" src="./img/index/flower-4.png" alt="">
+    <img class="flower-item flower-5 position-absolute js-flower5" src="./img/index/flower-4.png" alt="">
+    <img class="flower-item flower-6 position-absolute js-flower6" src="./img/index/flower-bottom.png" alt="">
+  </div>
+  <main class="mb-3">
+    <div class="scroll mx-auto">
+      <div class="scroll__top position-relative">
+        <img class="flower-item flower-title1 position-absolute js-flowerTitle1" src="./img/index/flower-title.png" alt="">
+        <img class="flower-item flower-title2 position-absolute js-flowerTitle2" src="./img/index/flower-3.png" alt="">
+        <img class="position-relative" src="./img/index/scroll-top.png" alt="">
+      </div>
+      <div class="scroll__wrap position-relative">
+        <span class="scroll__content__item1 position-absolute js-opacity">
+          <div class="position-relative">
+            <img class="position-absolute" style="top:0; left:0; z-index: 1;" src="./img/index/scroll-title-text1.png" alt="">
+            <img class="js-rotate position-relative" style="z-index: 0;" src="./img/index/scroll-title-bg.png" alt="">
+          </div>
+        </span>
+        <span class="scroll__content__item2 position-absolute js-opacity">
+          <div class="position-relative">
+            <img class="position-absolute" style="top:0; left:0; z-index: 1;" src="./img/index/scroll-title-text2.png" alt="">
+            <img class="js-rotate position-relative" style="z-index: 0;" src="./img/index/scroll-title-bg.png" alt="">
+          </div>
+        </span>
+        <div class="scroll__content js-scrollContent position-relative">
+          <img src="./img/index/scroll-content.png" alt="">
+        </div>
+        <div class="scroll__bottom"><img src="./img/index/scroll-bottom.png" alt=""></div>
+      </div>
+      <div><img src="./img/index/scroll-bottom_blank.gif" alt=""></div>
+    </div>
+    <form class="mx-4 py-3 position-relative needs-validation" novalidate>
+      <h3 class="text-secondary letter-spacing-1 fs-1 text-center mb-4 mt-4">選擇櫃點</h3>
+      <div class="mb-3">
+        <select class="form-select form-select-lg rounded-0 js-city" required>
+          <option selected disabled value="">請選擇縣市</option>
+          <option value="1">台北</option>
+        </select>
+        <div class="invalid-feedback">
+          請選擇縣市
+        </div>
+      </div>
+      <div class="mb-3">
+        <select class="form-select form-select-lg rounded-0 js-stores" required>
+          <option selected disabled value="">請選擇櫃點</option>
+          <option value="1">內湖區</option>
+        </select>
+        <div class="invalid-feedback">
+          請選擇櫃點
+        </div>
+      </div>
+      <div class="d-grid gap-2 mb-4">
+        <button type="submit" class="btn btn-light btn-lg text-primary">開始遊戲</button>
+      </div>
+      <div class="text-secondary text-center small text-shadow-info">
+        <p class="small">*活動注意事項：每人限玩乙次</p>
+        <p class="small">*贈品數量有限，贈完為止。</p>
+        <p class="small">雅詩蘭黛保有活動解釋、修改及終止之權利。</p>
+        <p class="small">*刮刮樂兌禮前請先填寫顧客資料</p>
+        <p class="small">*限 18 歲以上方能兌禮</p>
+      </div>
+    </form>
+  </main>
+</div>

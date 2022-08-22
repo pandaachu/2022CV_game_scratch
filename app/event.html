@@ -1,0 +1,94 @@
+---
+title: 刮刮樂
+layout: ./app/layout.ejs
+engine: ejs
+current: event
+js: event
+---
+
+<div class="l-container event-index bg-event position-relative ">
+  <header class="bg-transparent"><img class="w-50 h-auto" src="img/logo.png" alt="logo"></header>
+  <div>
+    <div class="scratch animated invisible">
+      <div class="scratchArea position-relative">
+        <img class="scratch-hand js-scratch-hand pe-none position-absolute" src="img/hand.png" alt="">
+        <div class="scratch-frame pe-none position-relative zindex-1">
+          <img class="position-absolute" src="./img/event-typo.png" alt="">
+          <img src="./img/scratch-frame.png" alt="">
+        </div>
+        <div class="sc__wrapper position-absolute" style="top: 0; z-index: 0;">
+          <div><img src="./img/event-top_blank.gif" alt=""></div>
+          <div class="sc__container position-relative" id="js--sc--container"></div>
+        </div>
+    </div>
+  </div>
+  <div><img src="./img/event-prize-info.png" alt=""></div>
+</div>
+
+<!-- Modal -->
+<div class="result modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-0 border-0 result-bg">
+      <div class="modal-body p-0">
+        <div class="modal-header border-0">
+          <img class="mx-auto w-50 h-auto" src="./img/logo.png" alt="">
+        </div>
+        <div class="position-relative overflow-hidden">
+          <!-- prize-typo -->
+          <div class="position-absolute zindex-2">
+            <img src="./img/result-typo.png" alt="">
+          </div>
+          <!-- flower -->
+          <div>
+            <img class="result-flower-item result-flower-1 position-absolute zindex-1" src="./img/result-flower_1.png" alt="">
+            <img class="result-flower-item result-flower-2 position-absolute zindex-1" src="./img/result-flower_2.png" alt="">
+          </div>
+          <!-- prize-frame -->
+          <div class="position-absolute"><img src="./img/result-frame.png" alt=""></div>
+          <!-- prize-photo -->
+          <div class="">
+            <div>
+              <img src="./img/modal-top_blank.gif" alt="">
+            </div>
+            <div class="result-title position-absolute text-center text-white d-flex flex-column align-items-center w-100 zindex-2">
+              <h3 class="fs-3 mb-2">恭喜中獎！</h3>
+              <h6>請速到<span>統一時代百貨台北店</span>專櫃領獎</h6>
+            </div>
+            <img class="modal-prize-photo" src="./img/prize_01.png" alt="">
+          </div>
+          <!-- info -->
+          <div class="mt-5"><img src="./img/result-info.png" alt=""></div>
+        </div>
+      </div>
+      <div class="d-grid gap-4 mx-3 mb-4">
+        <button class="btn btn-light btn-lg text-primary" data-bs-target="#typeModal" data-bs-toggle="modal">直接到櫃兌換</button>
+        <button class="btn btn-light btn-lg text-primary">確認得獎資訊</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- typeModal -->
+<div class="modal fade type-modal" id="typeModal" aria-hidden="true" aria-labelledby="typeModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-info type-modal-bg">
+      <div class="modal-header flex-column text-info border-0">
+        <h5 class="modal-title fs-3" id="typeModalLabel">請輸入櫃點碼</h5>
+        <h6>(限專櫃人員輸入)</h6>
+      </div>
+      <form>
+        <div class="modal-body">
+          <input class="form-control form-control-lg bg-white text-info border-info mb-3 rounded-0" inputmode="numeric" type="number" placeholder="櫃點碼" aria-label="櫃點碼" required>
+          <div class="d-flex justify-content-around mb-3">
+            <button class="btn btn-light btn-lg text-primary flex-fill me-4" data-bs-target="#resultModal" data-bs-toggle="modal">取消</button>
+            <button type="submit" class="btn btn-primary btn-lg flex-fill">確認</button>
+          </div>
+          <div class="text-info text-center small">
+            <p class="small">*刮刮樂兌禮前請先填寫顧客資料</p>
+            <p class="small">*限 18 歲以上方能兌禮</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
